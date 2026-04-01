@@ -1,3 +1,5 @@
+CI/CD PIPELINE FOR WEB APPLICATION DEPLOYMENTS IN EC2
+
 EC2 Instances – Hosts the application
 
 AWS CodeDeploy – Handles deployment automation
