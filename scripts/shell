@@ -1,0 +1,17 @@
+# 1. Network
+aws cloudformation deploy --template-file network.yaml --stack-name network
+
+# 2. Compute
+aws cloudformation deploy --template-file compute.yaml \
+--stack-name compute \
+--parameter-overrides VPCId=<VPC> PublicSubnet=<SUBNET>
+
+# 3. Database
+aws cloudformation deploy --template-file database.yaml \
+--stack-name database \
+--parameter-overrides VPCId=<VPC> PrivateSubnet=<SUBNET>
+
+# 4. Pipeline
+aws cloudformation deploy --template-file pipeline.yaml \
+--stack-name pipeline \
+--parameter-overrides GitHubOwner=xxx GitHubRepo=xxx GitHubToken=xxx
